@@ -15,7 +15,7 @@ PRODUCTION PHASES:
   1.      Nifti-1 file support
   2.      Nifti-1 + gzip file support
   3.      Nifti-2 + gzip file support
-  Future. DICOM, MINC, MetaImage, ... support
+  4.      DICOM, MINC, MetaImage, ... support
   
 IDEAL WORKFLOW:
 
