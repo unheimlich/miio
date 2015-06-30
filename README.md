@@ -12,7 +12,7 @@ DESIGN TENETS:
 
 PRODUCTION PHASES:
 
-  1.      Nifti-1 file support
+  1.      Nifti-1 file support (In progress)
   2.      Nifti-1 + gzip file support
   3.      Nifti-2 + gzip file support
   4.      DICOM, MINC, MetaImage, ... support
