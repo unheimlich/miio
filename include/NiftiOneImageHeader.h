@@ -21,14 +21,39 @@ namespace miio
         
     public:
         
+        ///
+        /// \brief Default Constructor
+        ///
         NiftiOneImageHeader();
         
-        void ReadHeader(std::ifstream file);
-        void WriteHeader(std::ifstream file);
+        ///
+        /// \brief Destructor
+        ///
+        ~NiftiOneImageHeader();
         
-        int GetSizeOfHeader();
+        ///
+        /// \brief Read header from file stream
+        ///
+        void Read(std::ifstream &file);
+    
+        ///
+        /// \brief Write header to file stream
+        ///
+        void Write(std::ifstream &file);
+        
+        ///
+        /// \brief Copy information from reference header into this header
+        ///
+        void CopyMetadata(const NiftiOneImageHeader &refHeader);
+        
+        ///
+        /// \brief Print header information
+        ///
+        void Print();
+        
+        //int GetSizeOfHeader();
         char GetSliceOrdering();
-        short* GetDimensions();
+        short *GetDimensions();
         float GetIntentP1();
         float GetIntentP2();
         float GetIntentP3();
@@ -36,7 +61,7 @@ namespace miio
         short GetDataType();
         short GetBitsPerPixel();
         short GetSliceStart();
-        float* GetGridSpacing();
+        float *GetGridSpacing();
         float GetDataLocation();
         float GetScaleSlope();
         float GetScaleIntersect();
@@ -47,8 +72,8 @@ namespace miio
         float GetMinIntensity();
         float GetSliceDuration();
         float GetTimeAxisShift();
-        char* GetDescription();
-        char* GetAuxFile();
+        char *GetDescription();
+        char *GetAuxFile();
         short GetQFormCode();
         short GetSFormCode();
         //float GetQuaternB();
